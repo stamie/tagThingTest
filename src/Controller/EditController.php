@@ -49,7 +49,7 @@ class EditController extends AbstractController
             ->add('name', TextType::class, ['attr' => ['value' => $product->getName()]])
             ->add('basePrice', IntegerType::class, ['attr' => ['value' => $product->getBasePrice()]])
             ->add('save', SubmitType::class, [
-                'attr' => ['class' => 'save'],
+                'attr' => ['value' => 'Save'],
             ]);            
         $form = $form->getForm();
         if ($request)

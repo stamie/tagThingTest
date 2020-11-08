@@ -1,40 +1,27 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ListController!{% endblock %}
+{% block title %}Reservations List{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em 0; max-width: 800px; width: 80%; font: 18px/1.5 sans-serif; position: absolute;
-top: 0;
-left: 20%;}
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-    .example-menu { margin: 1em 0; max-width: 800px; width: 20%; font: 18px/1.5 sans-serif; }
-</style>
-<div class="example-menu">
-<ul>
-<li><a href="/list/products">Products List</a></li>
-<li><a href="/create/createproduct">Add Product</a></li>
-<li><a href="/create/createreservation">Add Reservation</a></li>
-</ul>
-</div>
+
+<h2>Reservations List</h2>
 
 <div class="example-wrapper">
-    <h1>Reservations List</h1>
-
+    
     <table>
     <tr>
         <th>Product name</th>
         <th>Base Price</th>
         <th>Final Price</th>
-        <th></th>
+        <th colspan=2></th>
     </tr>
         {% for reservation in reservations %}
             <tr>
                 <td>{{ reservation.product.name }}</td>
                 <td>{{ reservation.basePrice }}</td>
                 <td>{{ reservation.finalPrice }}</td>
-                <td><a href="/edit/editreservation/{{ reservation.id }}">Edit</a></td>
-                <td><a href="/edit/deletereservation/{{ reservation.id }}">Delete</a></td>
+                <td><a class="btn" href="/edit/editreservation/{{ reservation.id }}">Edit</a></td>
+                <td><a class="btn delete" href="/edit/deletereservation/{{ reservation.id }}">Delete</a></td>
             </tr>
         {% endfor %}
     </table>

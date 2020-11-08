@@ -2,11 +2,175 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="/styles/layout.css" />
+        <link rel="stylesheet" href="/styles/framework.css" />
+
+        
         <title>{% block title %}Welcome!{% endblock %}</title>
+
         {% block stylesheets %}{% endblock %}
     </head>
-    <body>
+    <body id="top">
+    <div class="bgded overlay padtop" style="background-image:url('/images/demo/backgrounds/01.jpg');">
+    <header id="header" class="hoc clear">
+    <div id="logo" class="fl_left"> <h1>TagThing felvételi feladat</h1></div>
+    <nav id="mainav" class="fl_right"> 
+      <ul class="clear">
+        <li class="products"><a href="/list/products">Products List</a></li>
+        <li class="reservations"><a href="/list/reservations">Reservations List</a></li>
+        <li class="product"><a href="/create/createproduct">Add Product</a></li>
+        <li class="reservation"><a href="/create/createreservation">Add Reservation</a></li>
+      </ul>
+    </nav>
+
+    </header>
+    <div id="pageintro" class="hoc clear">
+        
+        <div style="width: 100%; position: relative; left: 0%; top: 0%;" >
+            <h1>Stampel Emese (Ágota) Megoldása</h1>
+            <p>Sziasztok, </br> Bocsássatok meg a tegezésért, de ha már emailben meg telefonon megengedtük magunknak, folytatom a hagyományt :)</p>
+            <h2>Ez az Én megoldott rész feladataim</h2>
+            <ul>
+                <li>0-as Task</li>
+                <li>1-es Task</li>
+                <li>2-es Task</li>
+                <li>3-es Task</li>
+                <li>+4-es Task :)</li>
+            </ul>
+            <p>Ja, és a kinézet :)</p>
+        </div>
+    
+    </div>
+    
+    </div>
+    </div>
+    <div class="wrapper row1">
+    <section id="ctdetails" class="hoc clear"> 
+    
+        <h1>Egy kicsit magamról</h1>
+        <div class="group">
+            <div class="one_third first">
+              <img src="/images/me.jpg" style="max-height: 250px; float:left; margin-right:10px" />
+            </div>
+            <div class="two_third last">
+              <p>Ezt a szomorú képet azért tettem ide, mert ez sikerült a legjobban. De valahogy így nézek ki. Ha boldog vagyok, akkor sokkal szebb vagyok....<br>
+            Ahogy az önéletrajzomból is kivehető, Pestenszülettem, s Somogyvámoson élek. Inmár 20 éve. Mivel szeretek itt lakni, ezért nem tervezem a visszaköltözésemet, így csak távmunkában tudok részt venni a Cég életében.<br>
+            
+            
+            <h2>Szakmai tapaszatlataim</h2>
+            PHP-ban, a Yii keretrendszert alaposan, a CakePHP-nak alapjait tanultam meg. Symfonyval, ez az első munkám. Remélem, tetszeni fog. Ismerem a Javascriptet, s jól használom a JQuery-t is.<br>
+            </p>
+        </div>
+        <div class="group">
+            <div class="one_third first">
+                <h2>Erőségeim</h2>
+                <ul>
+                <li>Mindenféle <b>SQL</b></li>
+                <li>PHP backend</li>
+                </ul>
+            </div>
+            <div class="one_third">
+                <h2>Gyengeségeim</h2>
+                <ul>
+                <li>CSS</li>
+                <li>Frontend fejlesztés</li>
+                </ul>
+            </div>
+            <div class="one_third last">
+                <h2>Amit tanulni szeretnék</h2>
+                <ul>
+                <li>Angular (alapjai mennek)</li>
+                <li>NodeJS (alapjai mennek)</li>
+                <li>Mélyebben a párhuzamos programozás</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    </div>
+    <div class="wrapper row3">
+    <main class="hoc container clear">
+    <h1>A nagybetűs MEGOLDÁS :)</h1>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
-    </body>
+        <div class="clear"></div>
+  </main>
+</div>
+    <div class="wrapper row4">
+  <footer id="footer" class="hoc clear"> 
+    <div class="one_quarter first">
+      <h6 class="heading">Elérhetőségeim</h6>
+      <p>email: <span><a href="mailto:estampel@gmail.com">estampel@gmail.com</a></span></p>
+      <p>telefon: <span>+36709428041</span></p>
+      <p>lakcím: <span>8699 Somogyvámos, Rózsa utca 7.</span></p>
+      
+      
+      <ul class="faico clear">
+        <li><a class="faicon-facebook" href="https://www.facebook.com/estampel/"><i class="fab fa-facebook"></i></a></li>
+        <li><a class="faicon-linkedin" href="https://www.linkedin.com/in/emese-stampel-09697427"><i class="fab fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="heading">Menü</h6>
+      <ul class="nospace linklist">
+        <li><a href="/list/products">Products List</a></li>
+        <li><a href="/list/reservations">Reservations List</a></li>
+        <li><a href="/create/createproduct">Add Product</a></li>
+        <li><a href="/create/createreservation">Add Reservation</a></li>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="heading">Ráfordított idő</h6>
+      <p class="nospace btmspace-15">Ez a munka 16 órát vett igénybe, kinézettel és szöveggel együtt!</p>
+      
+    </div>
+    <div class="one_quarter last">
+      <h6 class="heading">gitHub repom</h6>
+      <p>
+        <i class="fa-github-alt fa-fw fab"></i><a href="https://github.com/stamie">stamie</a>
+      </p>
+      <p>
+        <b>EZ A REPO NEM TARTALMAZZA AZ EGÉSZ MUNKÁSSÁGOMAT!</b>
+      </p>
+
+    </div>
+  </footer>
+</div>
+
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <p class="fl_left">Copyright &copy; 2020 - TagThing feladat</p>
+    <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+  </div>
+</div>
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/jquery.backtotop.js"></script>
+<script src="../js/jquery.mobilemenu.js"></script>
+<script>
+$(document).ready(function(){
+  $('#mainav>ul.clear>li').removeClass('active');
+  
+  if ($(location).attr('href') == "{{ url('index') }}" || $(location).attr('href') == "{{ url('products') }}")
+  {
+    $('#mainav>ul.clear>li.products').addClass('active');
+  }
+
+  if ($(location).attr('href') == "{{ url('reservations') }}")
+    {
+    $('#mainav>ul.clear>li.reservations').addClass('active');
+  }
+
+  if ($(location).attr('href') == "{{ url('createproduct') }}")
+  {
+    $('#mainav>ul.clear>li.product').addClass('active');
+  }
+
+  if ($(location).attr('href') == "{{ url('createreservation') }}")
+  {
+    $('#mainav>ul.clear>li.reservation').addClass('active');
+  }
+});
+</script>
+</body>
+</html>
 </html>
